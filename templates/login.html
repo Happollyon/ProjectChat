@@ -1,0 +1,32 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+    <nav>
+      <div><a href="/"> WebChat</a></div>
+      <div><a href="/login">login</a></div>
+      <div><a href="/register">Register</a></div>
+    </nav>
+  <div id="login-body">
+     <form action="/login2" method="post">
+        <input type="text" autocomplete="off" name="username" placeholder="username">
+         <input type="password" autocomplete="off" name='psw' placeholder="password">
+        <input type="submit" value="LOGIN">
+    </form>
+  </div>
+
+</body>
+</html>
