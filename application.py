@@ -121,7 +121,7 @@ def msg(data):
 @app.route("/selectmsgs/<int:channel_id>", methods=["GET"])
 def select(channel_id):
 
-    msg=db.execute("SELECT t.text ,t.user_id, t.url, u.username FROM text AS t JOIN users AS u ON t.user_id=u.id JOIN channel_text AS ct ON t.id=ct.text_id WHERE ct.channel_id=:channel_id LIMIT 100",{"channel_id":channel_id}).fetchall()
+    msg=db.execute("SELECT t.text, t.created_at ,t.user_id, t.url, u.username FROM text AS t JOIN users AS u ON t.user_id=u.id JOIN channel_text AS ct ON t.id=ct.text_id WHERE ct.channel_id=:channel_id LIMIT 100",{"channel_id":channel_id}).fetchall()
     db.commit
     r= requests.get('https://api.giphy.com/v1/stickers/random?api_key=48NW50Y7uuRCv01SltBUCCJiTcCMuCtu&tag=funny')
     if r.status_code ==200:

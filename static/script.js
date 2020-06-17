@@ -73,10 +73,10 @@ function select(channel_id,user) {
                 }
                 if(data.url!=='')
                 {
-                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div><img src='+data.url+'/>'
+                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div><img src='+data.url+'/><div>'+data.created_at+'</div>'
 
                 }else {
-                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div>'
+                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div><div>'+data.created_at+'</div>'
 
                 }
                  mydiv.appendChild(newcontent) })
@@ -117,7 +117,7 @@ function select(channel_id,user) {
                 newcontent.setAttribute("id", "text_right");
                 if(data.url!=null)
                 {
-                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div><img src='+data.url+'/>'
+                    newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div><img src='+data.url+'/><div>'+data.created_at+'</div>'
 
                 }else {
                     newcontent.innerHTML=newcontent.innerHTML= "<div id='username'>"+data.username+"</div><div id='msg_text'>"+data.text+'</div>'
